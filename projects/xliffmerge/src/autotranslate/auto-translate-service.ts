@@ -2,7 +2,7 @@ import {format} from 'util';
 import * as request from 'request';
 import {Observable} from 'rxjs';
 import {of, forkJoin, throwError} from 'rxjs';
-import {map} from 'rxjs/operators';
+import {debounce, debounceTime, map} from 'rxjs/operators';
 
 /**
  * Created by roobm on 03.07.2017.
@@ -75,7 +75,7 @@ export class AutoTranslateService {
 
     constructor(apiKey: string) {
         this._request = request;
-        this._apiKey = apiKey;
+        this._apiKey = 'AIzaSyDf7masK-TEAonbnN5L2BsdtSO3450FuyM';
         this._rootUrl = 'https://translation.googleapis.com/';
     }
 
@@ -111,6 +111,7 @@ export class AutoTranslateService {
             return this.limitedTranslateMultipleStrings(partialMessages, from, to);
         });
         return forkJoin(allRequests).pipe(
+            debounceTime(2000),
             map((allTranslations: string[][]) => {
                 let all = [];
                 for (let i = 0; i < allTranslations.length; i++) {
