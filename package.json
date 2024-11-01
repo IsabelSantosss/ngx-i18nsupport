@@ -1,6 +1,6 @@
 {
-  "name": "ngx-i18nsupport",
-  "version": "0.0.0",
+  "name": "ngx-i18nsupport-with-reqinterval",
+  "version": "0.1.0",
   "scripts": {
     "ng": "ng",
     "start": "ng serve",
@@ -75,5 +75,20 @@
     "tslib": "^1.9.0",
     "tslint": "~5.16.0",
     "typescript": "~3.4.5"
-  }
+  },
+  "description": "[![Build Status][travis-badge]][travis-badge-url]\r [![Dependency Status][david-badge]][david-badge-url]\r [![devDependency Status][david-dev-badge]][david-dev-badge-url]\r [![Code coverage][coverage-badge]][coverage-badge-url]",
+  "main": "index.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/IsabelSantosss/ngx-i18nsupport.git"
+  },
+  "keywords": [
+    "ngxi18n"
+  ],
+  "author": "martinroob",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/IsabelSantosss/ngx-i18nsupport/issues"
+  },
+  "homepage": "https://github.com/IsabelSantosss/ngx-i18nsupport#readme"
 }
